@@ -229,6 +229,153 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/09/webStorm配置less以及压缩css/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lishuli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/lishulihh/photo/master/20180607225705.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一朵的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/09/webStorm配置less以及压缩css/" itemprop="url">webStorm配置less以及压缩css</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-09T11:02:44+08:00">
+                2018-06-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="websrorm下配置less环境-and-设置压缩css"><a href="#websrorm下配置less环境-and-设置压缩css" class="headerlink" title="websrorm下配置less环境  and  设置压缩css"></a>websrorm下配置less环境  and  设置压缩css</h1><p> 首先,webstorm这个强大的编辑器是自带less的，不过编译过程是需要nodejs环境。</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
+<li><p>下载对应版本的NODEJS：  HTTPS://NODEJS.ORG/。  </p>
+<ol>
+<li>安装完成后打开命令符(WIN+R）,分别输入NODE-V以及NPM-V，如果返回版本号说明你已经安装成功了。如下图：<br><img src="https://raw.githubusercontent.com/lishulihh/picture/master/1.jpg" width="500"> </li>
+<li>安装Less：npm install less。    </li>
+<li>配置webstorm：file -&gt;settings -&gt;Tools -&gt;File Watchers,点击右上角的“加号”标志add，进入对话框，如下图：</li>
+<li><img src="https://raw.githubusercontent.com/lishulihh/picture/master/2.jpg" width="500">  </li>
+<li>program里设置的是：lessc编译路径，它会默认编译到根目录。例如：/Users/xx/node_modules/less/bin/lessc。   </li>
+<li>如果你想顺便压缩编译后的css，除了在Arguments中写入–plugin=less-plugin-clean-css外还要安装压缩插件：<br>npm install -g less-plugin-clean-css，不过这里需要注意的是：less-plugin-clean-css的路径和lessc编译路径的/Users/xx/node_modules/less应一致；   </li>
+<li>你可以为你的编译器指定一个快捷键，然后你可以为这个编译器指定一个快捷键，我使用的是ALT + B；也可以手动右键css -&gt;less；如下图：</li>
+<li><img src="https://raw.githubusercontent.com/lishulihh/picture/master/3.png" width="500"> </li>
+<li>之后打开一个.less后缀名的文件，快捷键编译，如果webstorm底部状态控制器显示 Process finished with exit code 0 ，那么恭喜你，大功告成！</li>
+<li><img src="https://raw.githubusercontent.com/lishulihh/picture/master/4.png" width="500">  </li>
+</ol>
+<h3 id="小问题"><a href="#小问题" class="headerlink" title="小问题"></a>小问题</h3></li>
+</ol>
+<ol>
+<li>明明已经安装nodejs了，但总提醒你nodejs不存在，这个时候可以看一下你的nodejs安装的路径。</li>
+<li><img src="https://raw.githubusercontent.com/lishulihh/picture/master/7.png" width="500"> </li>
+<li><img src="https://raw.githubusercontent.com/lishulihh/picture/master/5.jpg" width="500"> </li>
+</ol>
+<ol>
+<li><p>出现乱码提示的问题，说明nodejs没有安装成功或者安装有问题，解决办法忒粗鲁，卸载重新安装nodejs，安装好后切记重启电脑；</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/lishulihh/picture/master/6.png" width="500"></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/echart样式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -533,7 +680,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -546,7 +693,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
