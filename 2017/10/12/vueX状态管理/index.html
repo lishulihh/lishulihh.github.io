@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="echarts," />
+  <meta name="keywords" content="vue," />
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="echart样式系列范例1：项目中使用echart时会经常要修改图例样式,或者再图例处配置数据,如下图： 首先，小圆点是怎么来得呢？默认是矩形…其实很简单，我们只需要在设置图例得data里设置icon为pin即可，这就是一个小圆点：  legend: {     orient: &amp;apos;vertical&amp;apos;,     top:&amp;apos;middle&amp;apos;,     right:">
-<meta name="keywords" content="echarts">
+<meta name="description" content="VUEX  每一个 Vuex 应用的核心就是 store（仓库）。 “store”基本上就是一个容器，它包含着你的应用中大部分的状态 (state)。Vuex 和单纯的全局对象有以下两点不同  Vuex 的状态存储是响应式的。当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新。  你不能直接改变 store 中的状态。改变 st">
+<meta name="keywords" content="vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="echart样式">
-<meta property="og:url" content="http://yoursite.com/2018/06/07/echart样式/index.html">
+<meta property="og:title" content="vuex">
+<meta property="og:url" content="http://yoursite.com/2017/10/12/vueX状态管理/index.html">
 <meta property="og:site_name" content="一朵的博客">
-<meta property="og:description" content="echart样式系列范例1：项目中使用echart时会经常要修改图例样式,或者再图例处配置数据,如下图： 首先，小圆点是怎么来得呢？默认是矩形…其实很简单，我们只需要在设置图例得data里设置icon为pin即可，这就是一个小圆点：  legend: {     orient: &amp;apos;vertical&amp;apos;,     top:&amp;apos;middle&amp;apos;,     right:">
+<meta property="og:description" content="VUEX  每一个 Vuex 应用的核心就是 store（仓库）。 “store”基本上就是一个容器，它包含着你的应用中大部分的状态 (state)。Vuex 和单纯的全局对象有以下两点不同  Vuex 的状态存储是响应式的。当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新。  你不能直接改变 store 中的状态。改变 st">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://raw.githubusercontent.com/lishulihh/picture/master/echart1.jpg">
-<meta property="og:updated_time" content="2018-06-07T14:52:46.098Z">
+<meta property="og:updated_time" content="2018-11-05T15:07:30.376Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="echart样式">
-<meta name="twitter:description" content="echart样式系列范例1：项目中使用echart时会经常要修改图例样式,或者再图例处配置数据,如下图： 首先，小圆点是怎么来得呢？默认是矩形…其实很简单，我们只需要在设置图例得data里设置icon为pin即可，这就是一个小圆点：  legend: {     orient: &amp;apos;vertical&amp;apos;,     top:&amp;apos;middle&amp;apos;,     right:">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/lishulihh/picture/master/echart1.jpg">
+<meta name="twitter:title" content="vuex">
+<meta name="twitter:description" content="VUEX  每一个 Vuex 应用的核心就是 store（仓库）。 “store”基本上就是一个容器，它包含着你的应用中大部分的状态 (state)。Vuex 和单纯的全局对象有以下两点不同  Vuex 的状态存储是响应式的。当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新。  你不能直接改变 store 中的状态。改变 st">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/07/echart样式/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/12/vueX状态管理/"/>
 
 
 
 
 
-  <title>echart样式 | 一朵的博客</title>
+  <title>vuex | 一朵的博客</title>
   
 
 
@@ -235,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/echart样式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/12/vueX状态管理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lishuli">
@@ -252,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">echart样式</h1>
+          <h1 class="post-title" itemprop="name headline">vuex</h1>
         
 
         <div class="post-meta">
@@ -264,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-07T22:50:38+08:00">
-                2018-06-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-12T22:08:19+08:00">
+                2017-10-12
               </time>
             
 
@@ -302,27 +300,40 @@
       
 
       
-        <h1 id="echart样式系列"><a href="#echart样式系列" class="headerlink" title="echart样式系列"></a>echart样式系列</h1><p>范例1：项目中使用echart时会经常要修改图例样式,或者再图例处配置数据,如下图：<br><img src="https://raw.githubusercontent.com/lishulihh/picture/master/echart1.jpg" alt="图片1"></p>
-<p>首先，小圆点是怎么来得呢？默认是矩形…<br>其实很简单，我们只需要在设置图例得data里设置icon为pin即可，这就是一个小圆点：</p>
-<pre><code> legend: {
-    orient: &apos;vertical&apos;,
-    top:&apos;middle&apos;,
-    right:20,
-    itemWidth:16,
-    itemHeight:1,
-    data:[
-        {name:&apos;0~12岁(儿童)  &apos;+&apos;23%&apos;,icon:&apos;pin&apos;},
-        {name:&apos;13~18岁(少年)  &apos;+&apos;27%&apos;,icon:&apos;pin&apos;},
-        {name:&apos;18~39岁(青年)  &apos;+&apos;14%&apos;,icon:&apos;pin&apos;},
-        {name:&apos;40~60岁(中年)  &apos;+&apos;20%&apos;,icon:&apos;pin&apos;},
-        {name:&apos;61岁以上(老年)  &apos;+&apos;16%&apos;,icon:&apos;pin&apos;},
-    ]
-},
-</code></pre><p>   ❤   注意点：  </p>
-<pre><code>1. icon分别有[&apos;circle&apos;, &apos;rect&apos;, &apos;roundRect&apos;, &apos;triangle&apos;, &apos;diamond&apos;, &apos;pin&apos;, &apos;arrow&apos;];  
-2. 设置itemWidth设置想要的大小，注意这里 itemHeight设置为与itemWidth相等或者为1才会是⚪；    
-3. 图例中的data的name值要与实际的data的name值一致，数据可以用一个变量拼接上去即可；   
-</code></pre>
+        <p>VUEX </p>
+<p>每一个 Vuex 应用的核心就是 store（仓库）。</p>
+<p>“store”基本上就是一个容器，它包含着你的应用中大部分的状态 (state)。Vuex 和单纯的全局对象有以下两点不同</p>
+<ul>
+<li><p>Vuex 的状态存储是响应式的。当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新。</p>
+</li>
+<li><p>你不能直接改变 store 中的状态。改变 store 中的状态的唯一途径就是显式地提交 (commit) mutation。这样使得我们可以方便地跟踪每一个状态的变化，从而让我们能够实现一些工具帮助我们更好地了解我们的应用。</p>
+</li>
+</ul>
+<a id="more"></a>  
+<p>1：安装vuex</p>
+<pre><code>npm install vuex --save-dev
+</code></pre><p>2:建立全局store</p>
+<ul>
+<li>在src文件夹下，新建文件夹（一般我们取名store），并在该文件夹下创建存储数据的js文件。</li>
+<li>在main.js文件下，我们需要将存储的数据文件设置为全局形式，方便引用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import store from &apos;./你新建的文件夹文字/你文件夹下的文件名字&apos;</span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &apos;#app&apos;,</span><br><span class="line">  router,</span><br><span class="line">  store, //这里不要忘记咯</span><br><span class="line">  render: h =&gt; h(App)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>3:编写js文件<br>1：定义state，用来装所需要存储的数据，初始值是空。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">const state = &#123;</span><br><span class="line">	user: &#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>接下来我们定义mutation，编写我们要改变的事件，去接受值，参数为两个，一个是state，一个是payLoad（就是我们要存储的所有数据）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">const mutations = &#123;</span><br><span class="line">  setUserInfo(state, payload) &#123;</span><br><span class="line">    state.user = payload //现在我们把存储的值都放在state的user对象下</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>将我们的state和mutation暴漏出去，用于全局引用</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">export default new Vuex.Store(&#123;</span><br><span class="line">  state,</span><br><span class="line">  mutations</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>登录存储<br>在我们获取登录接口并且服务器返回成功后，进行数据存储</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">this.$store.commit(&apos;setUserInfo&apos;, &#123;data:rep.data.data&#125;)</span><br></pre></td></tr></table></figure>
+<p>5.调用存储数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">this.$store.state.user//输出结果就是我们存储进去的信息</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -339,7 +350,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/echarts/" rel="tag"># echarts</a>
+            <a href="/tags/vue/" rel="tag"># vue</a>
           
         </div>
       
@@ -352,8 +363,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/15/git/" rel="next" title="git">
-                <i class="fa fa-chevron-left"></i> git
+              <a href="/2017/09/28/vue常用/" rel="next" title="vue常用">
+                <i class="fa fa-chevron-left"></i> vue常用
               </a>
             
           </div>
@@ -362,8 +373,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/28/大西北之旅/" rel="prev" title="大西北">
-                大西北 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/15/git/" rel="prev" title="git">
+                git <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -416,17 +427,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -497,22 +499,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#echart样式系列"><span class="nav-number">1.</span> <span class="nav-text">echart样式系列</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
