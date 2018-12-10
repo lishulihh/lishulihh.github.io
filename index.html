@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="">
+<html class="theme-next muse use-motion" lang="">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -93,7 +93,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Muse',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -196,6 +196,26 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -215,6 +235,531 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/ES6-Set和Map的数据结构/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lishuli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/lishulihh/photo/master/20180607225705.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一朵的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/03/ES6-Set和Map的数据结构/" itemprop="url">ES6 Set和Map的数据结构</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-03T21:21:38+08:00">
+                2018-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="ES6-Set-和-Map-数据结构"><a href="#ES6-Set-和-Map-数据结构" class="headerlink" title="ES6   Set 和 Map 数据结构"></a>ES6   Set 和 Map 数据结构</h2><h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><p>ES6提供了新的数据结构Set。类似于数组，只不过其成员都是唯一的，没有重复的值；  （set本身是一个构造函数，用来生成Set数据结构。）</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var s = new Set();</span><br><span class="line">  </span><br><span class="line">//通过add方法向Set结构中加入成员</span><br><span class="line">[2,3,5,4,5,2,2].map(x =&gt; s.add(x));</span><br><span class="line"> </span><br><span class="line">for (i of s)&#123; console.log(i)&#125;</span><br><span class="line">// 2 3 4 5 （表明set结构不会添加重复的值）</span><br></pre></td></tr></table></figure>
+</code></pre><p> Set结构接收一个数组作为参数 ，用来初始化。</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var items = new Set([1, 2, 3, 4, 5, 5, 5]) ;</span><br><span class="line"></span><br><span class="line">items.size</span><br><span class="line">//5</span><br></pre></td></tr></table></figure>
+</code></pre><p> 注意：向Set加入值的时候。不会发生类型转换。 这意味着，在Set中 5 和 “5” 是不同的值；</p>
+<p><strong>Set结构有以下属性：</strong></p>
+<ol>
+<li>Set.prototype.constructor :构造函数，默认就是Set函数。</li>
+<li>set.prototype.size ： 返回Set的成员总数。</li>
+</ol>
+<p><strong>Set结构有以下方法</strong>  </p>
+<ul>
+<li>add（value) ：添加某个值。   </li>
+<li>delete（value) :删除某个值。  </li>
+<li>has（value) ： 返回以一个布尔值，表示该值是否为Set的成员。  </li>
+<li><p>clear（value) ：清除所有成员。  </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">s.add(1).add(2).add(2); //注意‘2’被加入了两次</span><br><span class="line">s.size  //2  </span><br><span class="line">    </span><br><span class="line">s.has(1) //true</span><br><span class="line">s.has(2) //true</span><br><span class="line">s.has(3) //false</span><br><span class="line">     </span><br><span class="line">s.delete(2);</span><br><span class="line">s.has(2) //false</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>下面对比以下，看看在判断是否包括一个键上面，对象个Set的写法有哪些不同。</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//对象写法</span><br><span class="line">var properties = &#123;</span><br><span class="line">  &quot;width&quot;: 1,</span><br><span class="line">  &quot;height&quot;: 1</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"> if ( properties[someName]) &#123;</span><br><span class="line">   // do something</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">/****************************************/</span><br><span class="line"></span><br><span class="line"> // Set的写法</span><br><span class="line"> var properties = new Set();</span><br><span class="line"></span><br><span class="line"> properties.add(&apos;width&apos;);</span><br><span class="line"> peoperties.add(&apos;height&apos;);</span><br><span class="line"></span><br><span class="line"> if ( properties.has(someName) ) &#123;</span><br><span class="line">   // do something</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong> ：Array.from方法可以将Set结构转换为数组。</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var items = new Set([1,2,3,4,5]);</span><br><span class="line">var array = Array.from(items);</span><br></pre></td></tr></table></figure>
+</code></pre><p>  这也提供了一组数组中重复元素的方法;  </p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function dedupe(array) &#123;</span><br><span class="line">  return Array.from( new Set(array) );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><p> js对象本质上是键值对的集合。但是只能使用字符串充当键。这在一定程度上给我们的使用带来了很大的限制。</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var data = &#123;&#125;;</span><br><span class="line">var element = document.getElementById(&apos;myDiv&apos;);</span><br><span class="line"></span><br><span class="line">//将DOM节点 (即element）当做对象data的键</span><br><span class="line">// 但是对象只接受字符串作为键名，所以element被自动转换为字符串 &apos;[Object HTMLDivElement]&apos;</span><br><span class="line">data[element] = metadata;</span><br></pre></td></tr></table></figure>
+<p>而ES6正是为了解决这个问题才提供的Map结构。它类似于对象，也是键值对集合，但是键的范围不不限于字符串，对象也可以当做键。</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var m = new Map();</span><br><span class="line">o = &#123;p: &quot;hello world&quot;&#125;;</span><br><span class="line"></span><br><span class="line">m.set(o,&apos;content&apos;);</span><br><span class="line">console.log( m.get(o) ); //content</span><br></pre></td></tr></table></figure>
+<p>  set 和 get 是对象的方法 不要和Set数据结构混淆; 在上面的代码中，将对象o当做是m的一个键；</p>
+<p>  Map函数可接收一个数组进行初始化。</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var map = new Map([[&quot;name&quot;, &quot;小明&quot;], [&quot;title&quot;, &quot;Author&quot;]]);</span><br><span class="line"></span><br><span class="line">map.size //2</span><br><span class="line">map.has(&apos;name&apos;) //true</span><br><span class="line">map.get(&apos;name&apos;) //小明</span><br><span class="line">map.has(&quot;title&quot;); //true</span><br><span class="line">map.get(&quot;title&quot;); //Author</span><br></pre></td></tr></table></figure>
+<p><strong>注意：只有针对同一对象的引用，Map结构才将其视作同一个键。这一点要谨慎</strong></p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var map = new Map();</span><br><span class="line">   </span><br><span class="line">map.set([&apos;a&apos;],555);</span><br><span class="line">map.get([&apos;a&apos;]); //undefined</span><br></pre></td></tr></table></figure>
+</code></pre><p>上面代码中set 和get 方法表面上是针对同一个键，但实际上这是两个值，内存地址是不一样的，因为get方法无法读取该键，返回undefined。</p>
+<p>再看看下面一段代码：</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var map = new Map();</span><br><span class="line"> </span><br><span class="line">var k1 = [&apos;a&apos;];</span><br><span class="line">var k2 = [&apos;a&apos;];</span><br><span class="line"></span><br><span class="line">map.set(k1, 111);</span><br><span class="line">map.set(k2, 222);</span><br><span class="line"></span><br><span class="line">map.get( k1 );  //111</span><br><span class="line">map.get( k2 );  //222</span><br></pre></td></tr></table></figure>
+</code></pre><p>上面代码，变量k1和K2的值是一样的，但是他们在Map机构中被视为两个键，即同样值的两个实例，在Map中视为两个键。</p>
+<p><strong>Map的属性和方法</strong></p>
+<ul>
+<li>size：返回成员总数。</li>
+<li>set（key，value）：设置一个键值对。</li>
+<li>get（key）：读取一个键。</li>
+<li>has（key）：返回一个布尔值，表示某个键是否在Map结构中。</li>
+<li>delete（key）：删除某个键。</li>
+<li><p>clear()：清楚所有成员。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">   var m = new Map();</span><br><span class="line">    </span><br><span class="line">   m.set(&quot;edition&quot;, 6); // 键是字符串</span><br><span class="line">   m.set(262, &quot;standard&quot;); // 键是数字</span><br><span class="line">   m.set(undefined, &quot;nah&quot;); //键是undefined</span><br><span class="line"></span><br><span class="line">   var hello = function() &#123;</span><br><span class="line">     console.log(&quot;hello&quot;);</span><br><span class="line">   &#125;</span><br><span class="line">   m.set(hello, &quot;Hello ES6!&quot;);  //键是函数 </span><br><span class="line"></span><br><span class="line">   m.has(&quot;edition&quot;);  //true</span><br><span class="line">   m.has(&quot;years&quot;);  //false</span><br><span class="line">   m.has(262);  //true</span><br><span class="line">m.has(undefined);  //true</span><br><span class="line">m.has(hello);  //true</span><br><span class="line"> </span><br><span class="line">   m.delete( undefined );</span><br><span class="line">m.has( undefined );  //false</span><br><span class="line"></span><br><span class="line">m.get( hello );  //hello ES6!</span><br><span class="line">m.get(&quot;edition&quot;);  //6</span><br></pre></td></tr></table></figure>
+<p><strong>遍历</strong><br>Map原生提供三个遍历器。</p>
+</li>
+</ul>
+<ol>
+<li>key() : 返回键名的遍历器。</li>
+<li>values() : 返回键值的遍历器。</li>
+<li><p>entries() : 返回所有成员的遍历器。</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">for( let key of map.key() ) &#123;</span><br><span class="line"> console.log(&quot;key: %s&quot;, key);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">for ( let value of map.value() ) &#123;</span><br><span class="line"> console.log(&quot;value: %s&quot;, value);</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">for ( let item of map.entries() ) &#123;</span><br><span class="line"> console.log(&quot;Key: %s, Value: %s&quot;, item[0], item[1]);</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">  // same as using map.entries()</span><br><span class="line"> for (let item of map) &#123;</span><br><span class="line">  console.log(&quot;Key: %s, Value: %s&quot;, item[0], item[1]);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>另外，Map还有一个forEach方法，与数组中的forEach方法类似，也可以实现遍历。 </p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var reporter = &#123;</span><br><span class="line">report: function(key, value) &#123;</span><br><span class="line"> console.log(&quot;key: %s, Value: %s&quot;, key, value);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">map.forEach(function(value, key, map) &#123;</span><br><span class="line">  this.report(key, value)</span><br><span class="line"> &#125;, reporter);</span><br></pre></td></tr></table></figure>
+</code></pre><p> 上面代码中，forEach()方法的回调函数中的this, 就指向reporter。</p>
+<p>   转载处：<a href="https://blog.csdn.net/u014695532/article/details/51815017" target="_blank" rel="noopener">https://blog.csdn.net/u014695532/article/details/51815017</a> </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/vue中watch的理解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lishuli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/lishulihh/photo/master/20180607225705.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一朵的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/03/vue中watch的理解/" itemprop="url">vue中watch的理解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-03T20:29:28+08:00">
+                2018-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>  首先确认 watch 是一个<strong>对象</strong>，一定要当成对象来使用，对象就有键，有值；</p>
+<p> <strong>键</strong>：就是你要监听的那个值，比如说$route,这个就是要监听路由的变化。或者说是data中的某个变量；</p>
+<p>  <strong>值</strong>：  </p>
+<p>1.值可以是<strong>函数</strong>：当你监听的值发生变化时，需要执行的函数，这个函数有两个形参，第一个是当前值，第二个值是变化后的值。  </p>
+<p> 2.值也可以是<strong>函数名</strong>：不过这个函数名要用单引号来包裹；    </p>
+<p> 3.值可以是<strong>包括选项的对象</strong>：（handler，deep，immediate）  </p>
+<ol>
+<li>第一个handler：其值是一个回调函数，即监听到变化时应该执行的函数；</li>
+<li>第二个是deep：其值是true或false；确认是否深度监听。（一般监听时是不能监听到对象属性值的变化的，数组的值变化可以听到）</li>
+<li><p>第三个是 immediate：其值是true或false；确认是否以当前的初始值执行handler的函数；</p>
+<pre><code>export default {
+name: &quot;homePage&quot;,
+data(){
+return{
+ a:1,
+ b:2,
+ c:3
+}
+},
+watch:{
+a:function (val,oldVal) {
+  console.log(&quot;a当前值&quot;+ val ,&quot;a变化后的值&quot;+ oldVal );
+},
+//方法名
+b:&apos;changeB&apos;,
+
+//选项的对象
+c: {
+ handler: function (val, oldVal) {
+    console.log(&quot;c变化了&quot;)
+ },
+ deep: true,
+ immediate: true
+}
+},
+created(){
+this.a = this.a + 1;
+this.b = this.b + 2;
+},
+methods:{
+changeB:function (val,oldVal) {
+console.log(&quot;当前值&quot;+ val ,&quot;变化后的值&quot;+ oldVal );
+}
+}
+}  
+</code></pre></li>
+</ol>
+<p>  打印如下：<br><img src="https://raw.githubusercontent.com/lishulihh/picture/master/watch.png" alt="">；</p>
+<p> 文章借鉴地址（转载处）：<a href="https://blog.csdn.net/wangxiaoxiaosen/article/details/78487089" target="_blank" rel="noopener">https://blog.csdn.net/wangxiaoxiaosen/article/details/78487089</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/18/布局那点事/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lishuli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/lishulihh/photo/master/20180607225705.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一朵的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/18/布局那点事/" itemprop="url">布局那点事</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-18T21:54:08+08:00">
+                2018-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="关于布局那点事"><a href="#关于布局那点事" class="headerlink" title="关于布局那点事"></a>关于布局那点事</h2><p>   呃呃呃~~~最近得空整理了一份关于布局的小文档，其实系统首页这种布局是很常见的，</p>
+<p>  <em>第一类布局  </em></p>
+<p>   <strong>需求</strong>：本来系统是用的vue+elementUI搭建的，对于饿了么的栅格 有时候总是一些不能完全满足需求，就好比宽度占比，设置间距，有时候设置间距最后一个又掉下去了…<br>   第一行中个四格子之间距离是20px；而两边不要留。平时的话我们设置前三个盒子的margin-right:20px;最后一个不设置。而且宽度还要计算…</p>
+<p>  <strong>建议</strong>：但我一般这种布局会优选flex布局加css3新增的calc计算属性（简单又好设置）；</p>
+<p> <strong>html：</strong>   </p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;div class=&quot;homePage-t&quot;&gt;</span><br><span class="line">   &lt;div class=&quot;homePage-t-item&quot;&gt;1&lt;/div&gt;</span><br><span class="line">   &lt;div class=&quot;homePage-t-item&quot;&gt;2&lt;/div&gt;</span><br><span class="line">   &lt;div class=&quot;homePage-t-item&quot;&gt;3&lt;/div&gt;</span><br><span class="line">   &lt;div class=&quot;homePage-t-item&quot;&gt;4&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;homePage-c&quot;&gt;</span><br><span class="line">   &lt;div class=&quot;homePage-c-l&quot;&gt;cl&lt;/div&gt;</span><br><span class="line">   &lt;div class=&quot;homePage-c-r&quot;&gt;cr&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;homePage-b&quot;&gt;</span><br><span class="line">   &lt;div class=&quot;homePage-b-l&quot;&gt;bl&lt;/div&gt;</span><br><span class="line">   &lt;div class=&quot;homePage-b-r&quot;&gt;br&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</code></pre><p>  <strong>css：</strong>  </p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">  .homePage-t,.homePage-c,.homePage-b&#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    margin-bottom: 20px;</span><br><span class="line">    justify-content:space-between;</span><br><span class="line">   &#125;</span><br><span class="line"> .homePage-t&#123;</span><br><span class="line">    height: 140px;</span><br><span class="line">   &#125;</span><br><span class="line"> .homePage-c&#123;</span><br><span class="line">    height: 362px; 高度按ui给的图设置就好了</span><br><span class="line">   &#125;</span><br><span class="line"> .homePage-b&#123;</span><br><span class="line">    height: 334px;</span><br><span class="line">  &#125;</span><br><span class="line">.homePage-t-item,.homePage-c-l,.homePage-c-r,.homePage-b-l,.homePage-b-r&#123;</span><br><span class="line">   background-color: #f6e834;</span><br><span class="line">  &#125;</span><br><span class="line">.homePage-t .homePage-t-item&#123;</span><br><span class="line">   width:calc(25% - 10px);</span><br><span class="line"> &#125;</span><br><span class="line">.homePage-c .homePage-c-l&#123;</span><br><span class="line">   width:calc(34% - 10px);</span><br><span class="line"> &#125;</span><br><span class="line">.homePage-c .homePage-c-r&#123;</span><br><span class="line">   width:calc(66% - 10px);</span><br><span class="line"> &#125;</span><br><span class="line">.homePage-b .homePage-b-l&#123;</span><br><span class="line">  width:calc(64% - 10px);</span><br><span class="line"> &#125;</span><br><span class="line">.homePage-b .homePage-b-r&#123;</span><br><span class="line">  width:calc(36% - 10px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><p>   <img src="https://raw.githubusercontent.com/lishulihh/picture/master/layout.png" alt=""></p>
+<h2 id="第二类布局"><a href="#第二类布局" class="headerlink" title="第二类布局"></a>第二类布局</h2><p>   <strong>声明</strong>: 这里是用vue写的 卡片用的elementui</p>
+<p>   <strong>html：</strong></p>
+<pre><code>&lt;div class=&quot;homeCards&quot;&gt;
+  &lt;el-card shadow=&quot;hover&quot; v-for=&quot;(item, index) in homeInfo&quot; :key=&quot;index&quot;&gt;
+        //这里写格子里面的内容
+  &lt;/el-card&gt;
+&lt;/div&gt;
+</code></pre><p>   <strong>data:</strong></p>
+<pre><code>data(){
+   return{
+      homeInfo:[
+        {
+          name:&apos;hdfs&apos;,
+          img:&apos;&apos;,
+        },
+        {
+          name:&apos;hbase&apos;,
+          img:&apos;&apos;,
+        },
+        {
+          name:&apos;hive&apos;,
+          img:&apos;&apos;,
+        },
+        {
+          name:&apos;yarn&apos;,
+          img:&apos;&apos;,
+        },
+        {
+          name:&apos;knok&apos;,
+          img:&apos;&apos;,
+        }
+      ],
+     }
+   },
+</code></pre><p>  <strong> css:</strong></p>
+<pre><code>.homeCards{
+   display: flex;
+   flex-wrap: wrap;
+ }
+.homeCards .el-card {
+   width: 33%;
+   height: 300px;
+   border: 1px solid #e7e7e7;
+   background-color: #fff;
+   width: calc(33% - 36px);
+   margin:0px 18px 25px 18px;  
+  }
+</code></pre><p> 效果图：   </p>
+<p> <img src="https://raw.githubusercontent.com/chen-Devin/img-folder/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20181206164110.png" alt=""></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -307,6 +852,197 @@
             </a>
           </div>
           <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/16/数据存储/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lishuli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/lishulihh/photo/master/20180607225705.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一朵的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/16/数据存储/" itemprop="url">数据存储</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-16T22:54:00+08:00">
+                2018-10-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="前端知识点"><a href="#前端知识点" class="headerlink" title="前端知识点"></a>前端知识点</h3><h4 id="cookie-sessionStorage-localStorage"><a href="#cookie-sessionStorage-localStorage" class="headerlink" title="cookie sessionStorage localStorage"></a>cookie sessionStorage localStorage</h4><p><strong>cookie</strong></p>
+<p>用于保存登陆信息，限制大小在4kb左右。</p>
+<blockquote>
+<p>设置cookie函数 </p>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> let setCookie = (name,value,days) =&gt; &#123;</span><br><span class="line">  </span><br><span class="line"> //name  是设置cookie的名称</span><br><span class="line"> //value 是设置对应cookie名称的内容</span><br><span class="line"> //days  是设置cookie存储的过期时间</span><br><span class="line"></span><br><span class="line"> let date = new Date();</span><br><span class="line"> date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));</span><br><span class="line"> let expires = &quot;expires&quot; + date.toGMTString();</span><br><span class="line"> document.cookie = name + &apos;=&apos; + value + &apos;;&apos; + expires</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<p>获取cookie值的函数  </p>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">       let getCookie = (cname) =&gt; &#123;</span><br><span class="line">          </span><br><span class="line">        //name  是设置cookie的名称</span><br><span class="line">        let name = (cname) + &apos;=&apos;</span><br><span class="line">        let cookies = document.cookie.split(&apos;;&apos;);</span><br><span class="line">        cookie.forEach((item) =&gt; &#123;</span><br><span class="line">           let c = item.trim();</span><br><span class="line">           if(c.indexOf(name) == 0)&#123;</span><br><span class="line">              return c.substring(name.length, c.length)</span><br><span class="line">           &#125;</span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">        return &quot;&quot;</span><br><span class="line">       &#125;</span><br><span class="line">    ```     </span><br><span class="line">&gt; 修改cookie，重新给cookie的名称赋值即可  </span><br><span class="line"></span><br><span class="line">&gt; 删除cookie，只需要设置expires参数为以前的时间即可  </span><br><span class="line"></span><br><span class="line">**sessionStorage**</span><br><span class="line"></span><br><span class="line">h5的会话存储对象，用于临时保存同一窗口的数据，在关闭窗口后保存数据删除，本地存储</span><br><span class="line"></span><br><span class="line">&gt; 设置session</span><br><span class="line"></span><br><span class="line">    ``` </span><br><span class="line">       sessionStorage.setItem(key,value)</span><br></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<p>读取session</p>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sessionStorage.getItem(key)</span><br></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<p>移除单个session</p>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sessionStorage.removeItem(key)</span><br></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<p>移除所有session</p>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sessionStorage.clear()</span><br></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<p>与js数据对象的区别</p>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">js数据对象生命周期仅在当前页面有效，刷新就不存在了</span><br><span class="line">而session是在窗口关闭后就失效</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>localStorage(同一个域名共享，不可共享给两个域名)</strong>  </p>
+<p>h5的本地存储，永久性存储，除非手动清除，不能被爬虫爬到</p>
+<blockquote>
+<p>设置localStorage</p>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localStorage.setItem(key,value)</span><br></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<p>读取localStorage</p>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localStorage.getItem(key)</span><br></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<p>移除单个localStorage</p>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localStorage.removeItem(key)</span><br></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<p>移除所有localStorage</p>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localStorage.clear()</span><br></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<p>内存存满后的解决办法（当超出会报错，并且存不进去数据，也无法替换数据）</p>
+</blockquote>
+<ul>
+<li>划分域名，各域名下的存储空间由各业务组统一规划使用</li>
+<li>跨页面传数据，考虑单页应用</li>
+<li>清除不需要缓存</li>
+</ul>
+<p><strong>三者异同</strong></p>
+<pre><code>数据的生命周期：
+   cookie：一般由服务器生成，可设置失效时间，如果在浏览器端生成cookie，默认是关闭浏览器后失效
+   localStorage: 除非被清除，永久有效
+   sessionStorage：仅在当前对话下有效，关闭页面后，被清除
+
+ 存储数据大小：
+   cookie：4k左右
+   localStorage：5MB
+   sessionStorage：5MB
+
+ 与服务端通信：
+   cookie：每次都会携带在http头中，如果使用cookie存储过多数据带来性能问题
+   localStorage：仅在客户端（浏览器）中保存
+   sessionStorage：不参与和服务器的通信
+
+  易用性：
+   cookie：需要自己封装，原生的cookie接口不友好
+   localStorage：原生接口可以接受也可以自己封装
+   sessionStorage：
+</code></pre>
+          
         
       
     </div>
@@ -1001,539 +1737,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/12/vue初探/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lishuli">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/lishulihh/photo/master/20180607225705.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一朵的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/12/vue初探/" itemprop="url">vue记录</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-12T22:07:04+08:00">
-                2017-09-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h1><h2 id="Vue的基本概念"><a href="#Vue的基本概念" class="headerlink" title="Vue的基本概念"></a>Vue的基本概念</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><pre><code>渐进式 JavaScript 框架，核心功能比较小，如果你要做更强大的功能，就要去集成一些插件和第三方包
-
-核心插件:(全家桶)
-    Vue-Router:当触发了页面的超链接之后要渲染出哪个页面(组件)，就得靠路由
-
-    Vuex:全局存取数据(状态管理)
-</code></pre>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/12/vue初探/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/webStorm配置less以及压缩css/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lishuli">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/lishulihh/photo/master/20180607225705.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一朵的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/12/webStorm配置less以及压缩css/" itemprop="url">webStorm配置less以及压缩css</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-12T21:02:44+08:00">
-                2017-05-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="websrorm下配置less环境-and-设置压缩css"><a href="#websrorm下配置less环境-and-设置压缩css" class="headerlink" title="websrorm下配置less环境  and  设置压缩css"></a>websrorm下配置less环境  and  设置压缩css</h1><p> 首先,webstorm这个强大的编辑器是自带less的，不过编译过程是需要nodejs环境。</p>
-<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
-<li><p>下载对应版本的NODEJS：  HTTPS://NODEJS.ORG/。  </p>
-<ol>
-<li>安装完成后打开命令符(WIN+R）,分别输入NODE-V以及NPM-V，如果返回版本号说明你已经安装成功了。如下图：<br><img src="https://raw.githubusercontent.com/lishulihh/picture/master/1.jpg" width="500"> </li>
-<li>安装Less：npm install less。    </li>
-<li>配置webstorm：file -&gt;settings -&gt;Tools -&gt;File Watchers,点击右上角的“加号”标志add，进入对话框，如下图：</li>
-<li><img src="https://raw.githubusercontent.com/lishulihh/picture/master/2.jpg" width="500">  </li>
-<li>program里设置的是：lessc编译路径，它会默认编译到根目录。例如：/Users/xx/node_modules/less/bin/lessc。   </li>
-<li>如果你想顺便压缩编译后的css，除了在Arguments中写入–plugin=less-plugin-clean-css外还要安装压缩插件：<br>npm install -g less-plugin-clean-css，不过这里需要注意的是：less-plugin-clean-css的路径和lessc编译路径的/Users/xx/node_modules/less应一致；   </li>
-<li>你可以为你的编译器指定一个快捷键，然后你可以为这个编译器指定一个快捷键，我使用的是ALT + B；也可以手动右键css -&gt;less；如下图：</li>
-<li><img src="https://raw.githubusercontent.com/lishulihh/picture/master/3.png" width="500"> </li>
-<li>之后打开一个.less后缀名的文件，快捷键编译，如果webstorm底部状态控制器显示 Process finished with exit code 0 ，那么恭喜你，大功告成！</li>
-<li><img src="https://raw.githubusercontent.com/lishulihh/picture/master/4.png" width="500">  </li>
-</ol>
-<h3 id="小问题"><a href="#小问题" class="headerlink" title="小问题"></a>小问题</h3></li>
-</ol>
-<ol>
-<li>明明已经安装nodejs了，但总提醒你nodejs不存在，这个时候可以看一下你的nodejs安装的路径。</li>
-<li><img src="https://raw.githubusercontent.com/lishulihh/picture/master/7.png" width="500"> </li>
-<li><img src="https://raw.githubusercontent.com/lishulihh/picture/master/5.jpg" width="500"> </li>
-</ol>
-<ol>
-<li><p>出现乱码提示的问题，说明nodejs没有安装成功或者安装有问题，解决办法忒粗鲁，卸载重新安装nodejs，安装好后切记重启电脑；</p>
-</li>
-<li><p><img src="https://raw.githubusercontent.com/lishulihh/picture/master/6.png" width="500"></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/07/jQuery总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lishuli">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/lishulihh/photo/master/20180607225705.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一朵的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/07/jQuery总结/" itemprop="url">jQuery总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-07T21:33:23+08:00">
-                2017-05-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h1><h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><blockquote>
-<p>所有选择器获取的对象均为包装集，需通过[index]或get(index)获取，jQuery内部有隐式迭代，通过$.each()实现</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/07/jQuery总结/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/25/H5C3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lishuli">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/lishulihh/photo/master/20180607225705.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一朵的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/25/H5C3/" itemprop="url">H5C3总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-25T22:37:01+08:00">
-                2017-03-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="html5"><a href="#html5" class="headerlink" title="html5"></a>html5</h2><h3 id="新标签"><a href="#新标签" class="headerlink" title="新标签"></a>新标签</h3><pre><code>header        标签定义 section 或 document 的页眉。
-nav         标签定义导航链接的部分
-section      标签定义文档中的节
-aside         标签定义 article 以外的内容。
-article      标签定义外部的内容。
-footer        标签定义 section 或 document 的页脚。
-</code></pre>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/25/H5C3/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1588,7 +1791,7 @@ footer        标签定义 section 或 document 的页脚。
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1601,7 +1804,7 @@ footer        标签定义 section 或 document 的页脚。
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -1672,7 +1875,7 @@ footer        标签定义 section 或 document 的页脚。
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="VUE," />
 
 
 
@@ -79,13 +79,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="一朵的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2018/03/index.html">
+<meta name="description" content="首先确认 watch 是一个对象，一定要当成对象来使用，对象就有键，有值；  键：就是你要监听的那个值，比如说$route,这个就是要监听路由的变化。或者说是data中的某个变量；   值：   1.值可以是函数：当你监听的值发生变化时，需要执行的函数，这个函数有两个形参，第一个是当前值，第二个值是变化后的值。    2.值也可以是函数名：不过这个函数名要用单引号来包裹；      3.值可以">
+<meta name="keywords" content="VUE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue中watch的理解">
+<meta property="og:url" content="http://yoursite.com/2018/12/03/vue中watch的理解/index.html">
 <meta property="og:site_name" content="一朵的博客">
+<meta property="og:description" content="首先确认 watch 是一个对象，一定要当成对象来使用，对象就有键，有值；  键：就是你要监听的那个值，比如说$route,这个就是要监听路由的变化。或者说是data中的某个变量；   值：   1.值可以是函数：当你监听的值发生变化时，需要执行的函数，这个函数有两个形参，第一个是当前值，第二个值是变化后的值。    2.值也可以是函数名：不过这个函数名要用单引号来包裹；      3.值可以">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://raw.githubusercontent.com/lishulihh/picture/master/watch.png">
+<meta property="og:updated_time" content="2018-12-10T13:44:02.856Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一朵的博客">
+<meta name="twitter:title" content="vue中watch的理解">
+<meta name="twitter:description" content="首先确认 watch 是一个对象，一定要当成对象来使用，对象就有键，有值；  键：就是你要监听的那个值，比如说$route,这个就是要监听路由的变化。或者说是data中的某个变量；   值：   1.值可以是函数：当你监听的值发生变化时，需要执行的函数，这个函数有两个形参，第一个是当前值，第二个值是变化后的值。    2.值也可以是函数名：不过这个函数名要用单引号来包裹；      3.值可以">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lishulihh/picture/master/watch.png">
 
 
 
@@ -115,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/03/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/03/vue中watch的理解/"/>
 
 
 
 
 
-  <title>Archive | 一朵的博客</title>
+  <title>vue中watch的理解 | 一朵的博客</title>
   
 
 
@@ -140,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,74 +241,199 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Um..! 15 posts in total. Keep on posting.
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/vue中watch的理解/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lishuli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/lishulihh/photo/master/20180607225705.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一朵的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/03/15/git/" itemprop="url">
-              
-                <span itemprop="name">git</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">vue中watch的理解</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-15T21:16:16+08:00"
-              content="2018-03-15" >
-          03-15
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-03T20:29:28+08:00">
+                2018-12-03
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <p>  首先确认 watch 是一个<strong>对象</strong>，一定要当成对象来使用，对象就有键，有值；</p>
+<p> <strong>键</strong>：就是你要监听的那个值，比如说$route,这个就是要监听路由的变化。或者说是data中的某个变量；</p>
+<p>  <strong>值</strong>：  </p>
+<p>1.值可以是<strong>函数</strong>：当你监听的值发生变化时，需要执行的函数，这个函数有两个形参，第一个是当前值，第二个值是变化后的值。  </p>
+<p> 2.值也可以是<strong>函数名</strong>：不过这个函数名要用单引号来包裹；    </p>
+<p> 3.值可以是<strong>包括选项的对象</strong>：（handler，deep，immediate）  </p>
+<ol>
+<li>第一个handler：其值是一个回调函数，即监听到变化时应该执行的函数；</li>
+<li>第二个是deep：其值是true或false；确认是否深度监听。（一般监听时是不能监听到对象属性值的变化的，数组的值变化可以听到）</li>
+<li><p>第三个是 immediate：其值是true或false；确认是否以当前的初始值执行handler的函数；</p>
+<pre><code>export default {
+name: &quot;homePage&quot;,
+data(){
+return{
+ a:1,
+ b:2,
+ c:3
+}
+},
+watch:{
+a:function (val,oldVal) {
+  console.log(&quot;a当前值&quot;+ val ,&quot;a变化后的值&quot;+ oldVal );
+},
+//方法名
+b:&apos;changeB&apos;,
+
+//选项的对象
+c: {
+ handler: function (val, oldVal) {
+    console.log(&quot;c变化了&quot;)
+ },
+ deep: true,
+ immediate: true
+}
+},
+created(){
+this.a = this.a + 1;
+this.b = this.b + 2;
+},
+methods:{
+changeB:function (val,oldVal) {
+console.log(&quot;当前值&quot;+ val ,&quot;变化后的值&quot;+ oldVal );
+}
+}
+}  
+</code></pre></li>
+</ol>
+<p>  打印如下：<br><img src="https://raw.githubusercontent.com/lishulihh/picture/master/watch.png" alt="">；</p>
+<p> 文章借鉴地址（转载处）：<a href="https://blog.csdn.net/wangxiaoxiaosen/article/details/78487089" target="_blank" rel="noopener">https://blog.csdn.net/wangxiaoxiaosen/article/details/78487089</a></p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/VUE/" rel="tag"># VUE</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/18/布局那点事/" rel="next" title="布局那点事">
+                <i class="fa fa-chevron-left"></i> 布局那点事
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/03/ES6-Set和Map的数据结构/" rel="prev" title="ES6 Set和Map的数据结构">
+                ES6 Set和Map的数据结构 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -309,6 +441,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -541,6 +677,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
